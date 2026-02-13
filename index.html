@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Valentine ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+}
+
+h1 {
+  margin-top: 100px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+#yesBtn {
+  background-color: white;
+  color: #ff4f81;
+}
+
+#noBtn {
+  background-color: black;
+  color: white;
+}
+
+#message {
+  margin-top: 30px;
+  font-size: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine forever? ❤️</h1>
+
+<button id="yesBtn" onclick="sayYes()">Yes 💖</button>
+<button id="noBtn" onmouseover="moveNo()">No 😜</button>
+
+<div id="message"></div>
+
+<script>
+function moveNo() {
+  var button = document.getElementById("noBtn");
+  button.style.position = "absolute";
+  button.style.left = Math.random() * window.innerWidth + "px";
+  button.style.top = Math.random() * window.innerHeight + "px";
+}
+
+function sayYes() {
+  document.getElementById("message").innerHTML = `
+    <p>You just made me the happiest person alive ❤️</p>
+    <img src="photo.jpg" width="300" style="border-radius:20px; margin-top:20px;">
+    <p>Forever starts now.</p>
+  `;
+}
+</script>
+
+</body>
+</html>
